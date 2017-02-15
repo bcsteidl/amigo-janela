@@ -1,0 +1,17 @@
+{
+    "name": "amigo-janela",
+    "version": "2.5.0",
+    "description": "Plugin de montagem de janelas e manutenção de dados. Podendo ser utilizado em NODEJS ou como plugin para desenvolvimento de frontend em javascript com JQuery",
+    "main": "index.js",
+    "authors": [
+        "Bruno César Steidl"
+    ],
+    "license": "ISC",
+    "homepage": "",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "lib/"
+    ]
+}
