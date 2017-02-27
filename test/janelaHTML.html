@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Teste de validação de campos</title>
+
+    <script src='../node_modules/jquery/dist/jquery.min.js'></script>
+
+    <script src="../node_modules/cldrjs/dist/cldr.js"></script>
+    <script src="../node_modules/cldrjs/dist/cldr/event.js"></script>
+    <script src="../node_modules/cldrjs/dist/cldr/supplemental.js"></script>
+
+    <script src="../node_modules/globalize/dist/globalize.js"></script>
+    <script src="../node_modules/globalize/dist/globalize/number.js"></script>
+    <script src="../node_modules/globalize/dist/globalize/date.js"></script>
+    <script src="../node_modules/globalize/dist/globalize/plural.js"></script>
+
+    <script src='../dist/amigo-janela.js'></script>
+
+</head>
+
+<body style="position: absolute;background: orange;width: 800px; height: 400px;">
+
+    <form name='formulario'>
+        <label data-tipo='Etiqueta' name='Etiqueta' data-rotulo='Etiqueta' data-horizontal='245px' data-vertical='315px' data-largura='54.313px' data-altura='19px' data-corfundo='#FFFFCC' data-visivel='true' title=''></label>
+
+        <button type='button' data-tipo='Botao' name='Botao' data-rotulo='Botão' data-horizontal='80px' data-vertical='349px' data-largura='100px' data-altura='24px' data-habilita='true' data-visivel='true' title='Testando o detalhamento do que o botão faz.'></button>
+
+        <div data-tipo='caixa' name='Container' data-horizontal='224px' data-vertical='77px' data-largura='187px' data-altura='93px' data-visivel='true' data-corfundo='#C3C2C2' data-borda='1px' title=''>
+            <input type='text' data-tipo='inteiro' name='Inteiro' data-rotulo='Inteiro' data-horizontal='53px' data-vertical='28px' data-largura='50px' data-altura='16px' data-tratamento='0' data-habilita='true' data-visivel='true' title='' data-tamanho='10' data-edita='true'
+                data-minimo='' data-maximo='' />
+
+        </div>
+
+        <input type='text' data-tipo='inteiro' name='Id' data-rotulo='Id' data-horizontal='20px' data-vertical='12px' data-largura='50px' data-altura='16px' data-tratamento='2' data-habilita='true' data-visivel='true' title='' data-tamanho='10' data-edita='true'
+            data-minimo='' data-maximo='' />
+
+        <input type='text' data-tipo='datahora' name='DataHora' data-rotulo='DataHora' data-horizontal='363px' data-vertical='310px' data-largura='150px' data-altura='16px' data-tratamento='0' data-habilita='true' data-visivel='true' title='' data-tamanho='20'
+            data-edita='true' data-data='false' data-hora='true' />
+
+        <input type='text' data-tipo='senha' name='Senha' data-rotulo='Senha' data-horizontal='91px' data-vertical='9px' data-largura='170px' data-altura='16px' data-tratamento='0' data-habilita='true' data-visivel='true' title='' data-tamanho='30' />
+
+        <input type='text' data-tipo='decimal' name='Decimal' data-rotulo='Decimal' data-horizontal='281px' data-vertical='7px' data-largura='70px' data-altura='16px' data-tratamento='0' data-habilita='true' data-visivel='true' title='' data-tamanho='12' data-decimais='3'
+            data-edita='true' data-minimo='' data-maximo='' />
+
+        <input type='checkbox' data-tipo='booleano' name='Booleano' data-rotulo='Booleano' data-horizontal='367px' data-vertical='4px' data-largura='50px' data-altura='16px' data-tratamento='0' data-habilita='true' data-visivel='true' title='' />
+
+        <select data-tipo='menu' name='Menu' data-rotulo='Menu' data-horizontal='443px' data-vertical='1px' data-largura='170px' data-altura='24px' data-tratamento='0' data-habilita='true' data-visivel='true' title='' data-edita='true' data-dinamico='false'>
+              <option value="0"></option>
+              <option value="1">Opção 1</option>
+              <option value="2">Opção 2</option>
+              <option value="3">Opção 3</option>
+            </select>
+
+        <input type='text' data-tipo='caracter' name='CriadoPor' data-rotulo='Criado Por' data-horizontal='19px' data-vertical='60px' data-largura='170px' data-altura='16px' data-tratamento='2' data-habilita='false' data-visivel='true' title='' data-tamanho='30'
+            data-edita='false' data-multilinha='false' />
+
+        <input type='text' data-tipo='datahora' name='DataCriacao' data-rotulo='Data Criação' data-horizontal='18px' data-vertical='106px' data-largura='150px' data-altura='16px' data-tratamento='2' data-habilita='false' data-visivel='true' title='' data-tamanho='19'
+            data-edita='false' data-data='true' data-hora='true' />
+
+        <input type='text' data-tipo='caracter' name='AlteradoPor' data-rotulo='Alterado Por' data-horizontal='16px' data-vertical='151px' data-largura='170px' data-altura='16px' data-tratamento='2' data-habilita='false' data-visivel='true' title='' data-tamanho='30'
+            data-edita='false' data-multilinha='false' />
+
+        <input type='text' data-tipo='datahora' name='DataAlteracao' data-rotulo='Data Alteração' data-horizontal='17px' data-vertical='199px' data-largura='150px' data-altura='16px' data-tratamento='2' data-habilita='false' data-visivel='true' title='' data-tamanho='19'
+            data-edita='false' data-data='true' data-hora='true' />
+
+        <input type='text' data-tipo='caracter' name='Caracter' data-rotulo='Caracter' data-horizontal='13px' data-vertical='288px' data-largura='170px' data-altura='16px' data-tratamento='0' data-habilita='true' data-visivel='true' title='' data-tamanho='30'
+            data-edita='true' data-multilinha='false' />
+
+        <figure data-tipo='imagem' name='Imagem' data-horizontal='583px' data-vertical='281px' data-largura='100px' data-altura='100px' data-imagem='' data-visivel='true' data-habilita='true' data-borda='1px' title=''></figure>
+
+        <div data-tipo='pastas' name='Pastas' data-horizontal='448px' data-vertical='70px' data-largura='250px' data-altura='200px' data-visivel='true' data-corfundo='#FFFFCC' title=''>
+            <div name='Aba1' data-rotulo='Aba 1' data-visivel='true'>
+                <input type='text' data-tipo='caracter' name='Caracter1' data-rotulo='Caracter1' data-horizontal='20px' data-vertical='26px' data-largura='170px' data-altura='16px' data-tratamento='0' data-habilita='true' data-visivel='true' title='' data-tamanho='30'
+                    data-edita='true' data-multilinha='false' />
+
+            </div>
+            <div name='Aba2' data-rotulo='Aba 2' data-visivel='true'>
+                <input type='text' data-tipo='decimal' name='Decimal2' data-rotulo='Decimal2' data-horizontal='15px' data-vertical='13px' data-largura='70px' data-altura='16px' data-tratamento='0' data-habilita='true' data-visivel='true' title='' data-tamanho='12' data-decimais='2'
+                    data-edita='true' data-minimo='' data-maximo='' />
+
+            </div>
+            <div name='Aba3' data-rotulo='Aba 3' data-visivel='true'>
+                <div data-tipo='caixa' name='Container' data-horizontal='7px' data-vertical='12px' data-largura='231px' data-altura='143px' data-visivel='true' data-corfundo='#C3C2C2' data-borda='1px' title=''>
+                    <label data-tipo='Etiqueta' name='Etiqueta' data-rotulo='Etiqueta' data-horizontal='17px' data-vertical='17px' data-largura='160px' data-altura='17px' data-corfundo='' data-visivel='true' title=''></label>
+
+                    <input type='text' data-tipo='data' name='Data' data-rotulo='Data' data-horizontal='16px' data-vertical='49px' data-largura='150px' data-altura='16px' data-tratamento='0' data-habilita='true' data-visivel='true' title='' data-tamanho='20' data-edita='true'
+                        data-data='true' data-hora='false' />
+
+                    <input type='text' data-tipo='hora' name='Hora' data-rotulo='Hora' data-horizontal='17px' data-vertical='93px' data-largura='150px' data-altura='16px' data-tratamento='0' data-habilita='true' data-visivel='true' title='' data-tamanho='20' data-edita='true'
+                        data-data='false' data-hora='true' />
+
+                </div>
+            </div>
+        </div>
+
+        <table data-tipo='lista' name='Lista' data-horizontal='750px' data-vertical='50px' data-largura='326px' data-altura='100px' data-visivel='true' data-corfundo='#C3C2C2' data-borda='1px' title='' data-formulario='0' data-condicao='' data-valores='{
+    "ordem": [
+        [0, 0]
+    ],
+    "cabecalhos": [{
+        "Rotulo": "Criado Por",
+        "Tamanho": 170,
+        "Objeto": "CriadoPor"
+    }, {
+        "Rotulo": "Data Criação",
+        "Tamanho": 150,
+        "Objeto": "DataCriacao"
+    }, {
+        "Rotulo": "Id",
+        "Tamanho": 0,
+        "Objeto": "Id"
+    }],
+    "registros": [{
+            "Id": 29,
+            "CriadoPor": "Zeca Baleiro",
+            "DataCriacao": "2017-01-31T11:02:26.302Z"
+        }, {
+            "Id": 30,
+            "CriadoPor": "Raul Seixas",
+            "DataCriacao": "2017-01-31T11:02:26.302Z"
+        }, {
+            "Id": 31,
+            "CriadoPor": "Roberto Carlos",
+            "DataCriacao": "2017-01-31T13:54:38.000Z"
+        },
+        {
+            "Id": 33,
+            "CriadoPor": "Elza Soares",
+            "DataCriacao": "2017-02-01T11:33:54.030Z"
+        }, {
+            "Id": 36,
+            "CriadoPor": "Tom Jobin",
+            "DataCriacao": "2017-02-03T12:27:18.000Z"
+        }, {
+            "Id": 38,
+            "CriadoPor": "Lobão",
+            "DataCriacao": "2017-02-03T12:34:12.000Z"
+        }, {
+            "Id": 41,
+            "CriadoPor": "Elis Regina",
+            "DataCriacao": "2017-02-13T12:24:22.000Z"
+        }
+    ]
+    }'></table>
+    </form>
+
+</body>
+
+</html>

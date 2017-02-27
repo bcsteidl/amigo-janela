@@ -1,5 +1,6 @@
 'use strict'
 
+const $ = require('jquery')
 const aolistar = require('./aolistar')
 
 module.exports = function(opcoes) {

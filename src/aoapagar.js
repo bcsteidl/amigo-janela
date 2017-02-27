@@ -1,5 +1,7 @@
 'use strict'
 
+const $ = require('jquery')
+
 module.exports = function(jan, opcoes) {
 
     // Executa comandos informados no parâmetro ao apagar registros

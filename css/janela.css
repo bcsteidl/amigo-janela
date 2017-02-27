@@ -19,6 +19,8 @@
 
 .btn_controle {
     position: absolute;
+    margin: 0px;
+    padding: 0px;
     margin-top: -2px;
     margin-right: 3px;
     width: 25px;
@@ -166,4 +168,16 @@
 
 .ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
     border-top-left-radius: 10px;
+}
+
+.ui-dialog-buttonpane {
+    font-family: "Times New Roman", "Arial", "Courier New", "Sans-Serif";
+    font-size: 13px;
+    height: 26px;
+    background: #D6D6D6;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
 }

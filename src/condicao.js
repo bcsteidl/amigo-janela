@@ -1,5 +1,7 @@
 'use strict'
 
+const $ = require('jquery')
+
 module.exports = function() {
     var retorno = "";
     $(this).find("input:text,input:password,input:hidden,input:checkbox,select,textarea").each(function() {

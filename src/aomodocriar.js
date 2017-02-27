@@ -1,5 +1,7 @@
 'use strict'
 
+const $ = require('jquery')
+
 module.exports = function(jan, opcoes) {
 
     // Entra em modo de criação

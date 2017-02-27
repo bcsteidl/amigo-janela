@@ -1,5 +1,7 @@
 'use strict'
 
+const $ = require('jquery')
+$.fn.tipagem = require('amigo-validacao');
 $.fn.condicao = require('./condicao.js')
 
 module.exports = function(opcoes, condicao) {

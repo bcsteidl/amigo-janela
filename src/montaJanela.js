@@ -1,5 +1,7 @@
 'use strict'
 
+const $ = require('jquery')
+
 module.exports = function(idJanela, opcoes) {
     //Cria a área de trabalho principal
     var jan = $("<div/>", {

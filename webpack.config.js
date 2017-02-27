@@ -15,25 +15,26 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.css$/,
-            include: [caminho("css")],
+            include: [caminho("css"), caminho("node_modules")],
             loader: "style-loader!css-loader"
         }, {
             test: /\.png$/,
-            include: [caminho("img")],
+            include: [caminho("img"), caminho("node_modules")],
             loader: "url-loader?limit=200000"
         }, {
             test: /\.jpg$/,
-            include: [caminho("img")],
+            include: [caminho("img"), caminho("node_modules")],
             loader: "url-loader?limit=100000"
         }, {
             test: /\.gif$/,
-            include: [caminho("img")],
+            include: [caminho("img"), caminho("node_modules")],
             loader: "url-loader?limit=100000"
         }]
     },
     resolve: {
         extensions: [".webpack.js", ".web.js", ".js", ".css"],
         alias: {
+            "jquery-ui": caminho("node_modules/jquery-ui-dist/jquery-ui.js"),
             css: caminho("css"),
             src: caminho("src")
         }

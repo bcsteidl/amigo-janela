@@ -1,19 +1,25 @@
 {
     "name": "amigo-janela",
     "version": "2.5.0",
-    "description": "Plugin de montagem de janelas e manutenção de dados. Podendo ser utilizado em NODEJS ou como plugin para desenvolvimento de frontend em javascript com JQuery",
+    "description": "Pacote de montagem de janelas e manutenção de dados, podendo ser utilizado como CommonJS ou plugin na página principal do projeto.",
     "main": "index.js",
     "scripts": {
+        "start": "webpack-dev-server --content-base . --inline",
         "build": "NODE_PRD=FALSE webpack",
         "build-min": "NODE_PRD=TRUE webpack -p",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "cd test && webpack"
     },
     "author": "Bruno César Steidl",
     "license": "ISC",
+    "dependencies": {
+        "amigo-validacao": "^2.5.0",
+        "jquery": "^3.1.1",
+        "jquery-ui-dist": "^1.12.1"
+    },
     "devDependencies": {
         "css-loader": "^0.26.1",
+        "file-loader": "^0.10.0",
         "style-loader": "^0.13.1",
-        "url-loader": "^0.5.7",
-        "webpack": "^2.2.1"
+        "url-loader": "^0.5.7"
     }
 }

@@ -1,5 +1,7 @@
 'use strict'
 
+const $ = require('jquery')
+
 module.exports = function(opcoes) {
     var jan = $(this);
     if ($(jan).find("form").attr("action") != undefined && $(jan).find("form").attr("action") != "") {

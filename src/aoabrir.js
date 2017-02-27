@@ -1,5 +1,8 @@
 'use strict'
 
+const $ = require('jquery')
+$.fn.tipagem = require('amigo-validacao');
+
 module.exports = function(jan, opcoes) {
     // Formata os campos do formulário conforme plugin de validação do AMIGO
     $(jan).find(".area_dados form").tipagem("recursiva");

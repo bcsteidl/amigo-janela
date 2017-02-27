@@ -1,12 +1,17 @@
 'use strict'
 
+require("./css/janela.css")
+
+const $ = require('jquery')
+require('jquery-ui')
+
 const montaJanela = require('./src/montaJanela')
 const preparaOpcoes = require('./src/preparaOpcoes')
 const botoesControle = require('./src/botoesControle')
 const execControles = require('./src/execControles')
 const aoabrir = require('./src/aoabrir')
 
-$.fn.json = require('../amigo-json')
+$.fn.json = require('amigo-json')
 $.fn.consultar = require('./src/consultar')
 $.fn.salvar = require('./src/salvar')
 $.fn.apagar = require('./src/apagar')
